@@ -52,7 +52,7 @@ public class MainActivity extends Activity{
             @Override
             public void onClick(View v) {
                 int [][] matriz = new int [3][3];
-                int det = 0;
+                float det = 0;
                 matriz[0][0] = Integer.parseInt(jetx1.getText().toString());
                 matriz[1][0] = Integer.parseInt(jetx2.getText().toString());
                 matriz[2][0] = Integer.parseInt(jetx3.getText().toString());
@@ -70,12 +70,12 @@ public class MainActivity extends Activity{
         });
 
     }
-    static public int determinante(int matriz[][]){
+    static public float determinante(int matriz[][]){
         int det = 0;
         det=((matriz[0][0])*(matriz[1][1])*(matriz[2][2])+(matriz[1][0])*(matriz[2][1])*(matriz[0][2])+
                 (matriz[2][0])*(matriz[0][1])*(matriz[1][2]))-((matriz[2][0])*(matriz[1][1])*(matriz[0][2])+
                 (matriz[1][0])*(matriz[0][1])*(matriz[2][2])+(matriz[0][0])*(matriz[2][1])*(matriz[1][2]));
-        return det;
+        return det/6;
     }
 
 
